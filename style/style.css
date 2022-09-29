@@ -1,0 +1,166 @@
+
+
+body 
+	{
+	background-color:black;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	}
+
+#tlo
+	{
+	background-image: url(../obraz/min3.jpg);
+	background-attachment: fixed;
+	background-size: contain;
+	background-repeat: repeat-y;
+	background-position: center;
+	margin: auto;
+ 	}
+
+#karta {
+	background-image: url(../obraz/pergamin.webp);
+	background-color: rgba(224, 201, 166,1);
+	min-height: 100%;
+	width: 60em;
+	margin: auto;
+	}
+
+#naglowek {
+	height: 15em;
+	width: 60em;
+	background-image: url(../obraz/sMOK1.jpg);
+	background-position: left top;
+	background-size: cover;
+	margin-top: 0;
+	}
+
+nav {
+	display: flex;
+	flex-wrap: nowrap;
+	height: 4em;
+	width: 100%;
+	position: sticky;
+	top: 0px;
+	left: 0px;
+	}
+
+a {
+	color: lightgray;
+	text-decoration: none;
+}
+
+
+.menu {
+	flex-basis: 25%;
+	flex-grow: 1;
+
+	background-image:linear-gradient(to bottom,#12223D,black) ;
+
+	text-decoration: none;
+
+	border: 0,5em solid black;
+	margin: 0 0 0 0;
+	padding-top: 0.7em;
+
+	text-align: center;
+	font-family: verdana;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: lightgray;
+	}
+
+.dropdown{
+	display: none;
+	position:fixed;
+	top: 4em;
+	z-index: 15;
+	
+	width: 15em;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	
+	list-style-type: none;
+}
+
+.eye
+{
+
+	background-image: none;
+	margin: auto;
+}
+
+.dropdownli{
+	
+
+	height: 2em;
+	margin-left: 0;
+	padding: 0 0 0 0;
+
+	background-color: rgb(68, 68, 68);
+
+	border: 0.25em solid black;
+	border-top-width: 0;
+	border-bottom-width:0.15em;
+
+	list-style-position: inside;
+	
+	color: lightgray;
+	text-align: center;
+	
+	cursor:pointer;
+	}
+
+.menucanvas{
+	display: none;
+	position: absolute;
+	z-index: 16;
+	margin-left: 0 0 0 0;
+	}
+
+li:first-of-type{
+	background-image: linear-gradient(to bottom, black,rgb(68, 68, 68));
+	}
+
+li:last-of-type{
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;	
+	}
+
+#div_logowania{
+	width: 58em;
+	background-image: none;
+	background-color: black;
+	color: lightgray;
+	padding: 0.5em 1em 0em 1em;
+	margin: 0 0 0 0; 
+	display: flex;
+	flex-wrap: nowrap;	
+	}
+
+#div_logowania div{
+	margin-left: 2em;
+	}
+
+.important_message{
+	color:red;
+	font-weight: bolder;
+	display: flex;
+	justify-content: flex-end;
+	}
+
+#pasek_logowania{	
+	width:100%;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	padding-top: 0.5em;
+	padding-right: 1em;
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	}
+
+input.login_row{
+	margin-right: 1em;
+	margin-left: 0.3em;
+	}
+
