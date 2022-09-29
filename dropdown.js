@@ -8,8 +8,8 @@ const links={
     firstdrop: ['index.php','index.php','index.php','index.php'],
     firstdropnames: ['THIS IS SKINK','THIS IS SKINK','THIS IS SKINK','THIS IS SKINK'],
 
-    seconddrop: ['index.php'],
-    seconddropnames: ['Ballada o drużynie', 'THIS IS SKINK','THIS IS LINK'],
+    seconddrop: ['index.php','index.php','index.php',],
+    seconddropnames: ['Ballada', 'THIS IS SKINK','THIS IS LINK'],
 
     thirddrop: ['index.php'],
     thirddropnames: ['THIS IS SKINK'],
