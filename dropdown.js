@@ -9,7 +9,7 @@ const links={
     firstdropnames: ['THIS IS SKINK','THIS IS SKINK','THIS IS SKINK','THIS IS SKINK'],
 
     seconddrop: ['index.php'],
-    seconddropnames: ['Ballada o drużynie', 'THIS IS SKINK'],
+    seconddropnames: ['Ballada o drużynie', 'THIS IS SKINK','THIS IS LINK'],
 
     thirddrop: ['index.php'],
     thirddropnames: ['THIS IS SKINK'],
