@@ -125,7 +125,9 @@ $adminis->who_are_you($pdo, $loger, $guard);
 <div id="naglowek"></div>
 
 <!-- kontrolna część -->
-<div style= "height: 1000px;"></div>
+<div style= "height: 1000px;">
+
+</div>
 
 </div>
 </div>
