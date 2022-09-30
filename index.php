@@ -14,7 +14,7 @@ INCLUDE_ONCE 'guardian.php';
 ?>
 
 <link href="style/style.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="dropdown.js"></script>
+<script type="text/javascript" src="./dropdown.js"></script>
 
 
 <?php
