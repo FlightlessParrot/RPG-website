@@ -62,6 +62,7 @@ class log_in
     <input type="submit" id="zaloguj" value="zaloguj">
     </form>
     HEREDOC;
+    
     return false;
     }
     }

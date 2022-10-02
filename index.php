@@ -27,6 +27,15 @@ catch(PDOException $controlmysqllog)
 {
 throw new PDOException($controlmysqllog->getmessage(), (int)$controlmysqllog->getCode());
 }
+
+try
+{
+	$pdop= new pdo($attr2, $admin, $admin_pass, $opts);
+}
+catch(PDOException $controlmysqllog)
+{
+throw new PDOException($controlmysqllog->getmessage(), (int)$controlmysqllog->getCode());
+}
 ?>
 
 <!-- web title -->
@@ -126,7 +135,9 @@ $adminis->who_are_you($pdo, $loger, $guard);
 
 <!-- kontrolna część -->
 <div style= "height: 1000px;">
-
+<form>
+	
+</form>
 </div>
 
 </div>

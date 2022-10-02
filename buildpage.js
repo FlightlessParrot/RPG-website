@@ -1,0 +1,9 @@
+const skillBuilder=
+{
+    skills: 
+    ['Arcana','Athletics','Awareness','Ballistic Skill','Beast Handling', 'Channelling', 'Crafting', 'Determination',
+    'Devotion','Dexterity', 'Entertain','Fortitude','Guile','Intimidation','Intuition','Lore',
+    'Medicine','Might','Nature','Reflexes','Stealth','Survival','Theology','Weapon Skill']
+
+    
+}
