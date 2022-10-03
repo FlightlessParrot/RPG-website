@@ -11,11 +11,12 @@ session_regenerate_id();
 <?php 
 INCLUDE_ONCE 'mysql_login.php';
 INCLUDE_ONCE 'guardian.php';
+REQUIRE_ONCE 'admin_tool.php';
+REQUIRE_ONCE 'pasek_logowania.php';
 ?>
 
 <link href="style/style.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="./dropdown.js"></script>
-
 
 <?php
 // logujemy się / logging in ;)
@@ -38,8 +39,6 @@ throw new PDOException($controlmysqllog->getmessage(), (int)$controlmysqllog->ge
 }
 ?>
 
-<!-- web title -->
-
 	<title>RPG Web</title>
 </head>
 
@@ -47,8 +46,6 @@ throw new PDOException($controlmysqllog->getmessage(), (int)$controlmysqllog->ge
 <body>
 <div id="tlo">
 <div id="karta">
-
-
 
 <!-- menu-->
 <nav>
@@ -60,7 +57,6 @@ throw new PDOException($controlmysqllog->getmessage(), (int)$controlmysqllog->ge
 		const firstdropdown = new dropdownCreator('first_drop', links.firstdrop, links.firstdropnames);
 		</script>
 	</ul>
-
 	
 	<button class="menu" onmouseover="dropButton.showDropdown('second_drop')" onmouseout="dropButton.hideDropdown('second_drop')">
 	<span>Witaj podróżniku!</span>
@@ -71,7 +67,6 @@ throw new PDOException($controlmysqllog->getmessage(), (int)$controlmysqllog->ge
 			const seconddropdown = new dropdownCreator('second_drop', links.seconddrop, links.seconddropnames);
 		</script>
 	</ul>
-
 	
 	<button class="menu" onmouseover="dropButton.showDropdown('third_drop')" onmouseout="dropButton.hideDropdown('third_drop')">
 	<span>Witaj podróżniku!</span>
@@ -82,7 +77,6 @@ throw new PDOException($controlmysqllog->getmessage(), (int)$controlmysqllog->ge
 			const thirddropdown = new dropdownCreator('third_drop', links.thirddrop, links.thirddropnames);
 		</script>
 	</ul>
-
 
 	<button class="menu" onmouseover="dropButton.showDropdown('fourth_drop')" onmouseout="dropButton.hideDropdown('fourth_drop')">
 	<span>Witaj podróżniku!</span>
@@ -100,7 +94,6 @@ throw new PDOException($controlmysqllog->getmessage(), (int)$controlmysqllog->ge
 <div id="div_logowania">
 
 <?php 
-REQUIRE 'pasek_logowania.php';
 
 // some defence against black magic
 $guard= new paladin();
@@ -109,7 +102,6 @@ $guard= new paladin();
 $loger=new log_in($guard);
 
 //we do what we do - login div
-
 echo "<div>";
 $logerin=$loger->session_log($pdo);
 $loger->check_user($guard);
@@ -122,12 +114,9 @@ $loger->change_password($loger,$pdo,$guard);
 echo "</div>";
 
 //admin panel
-REQUIRE_ONCE 'admin_tool.php';
 $adminis= new god;
 $adminis->who_are_you($pdo, $loger, $guard);
-
 ?>
-
 </div>
 
 <!-- obraz nagłówkowy/head image[my own translation :)] -->
@@ -135,11 +124,12 @@ $adminis->who_are_you($pdo, $loger, $guard);
 
 <!-- kontrolna część -->
 <div style= "height: 1000px;">
-<form>
+
+<!-- hero's page -->
+<form id="pageform">
 	
 </form>
 </div>
-
 </div>
 </div>
 <script>

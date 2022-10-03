@@ -2,6 +2,7 @@
 
 class hpage_object
 {
+// This class needs hero ID given to work properly - it must be provided by sub class or other external function/method
 public $send_data;
 public $sql;
 public $table;
@@ -21,13 +22,6 @@ public function check_user_p($checker,$pdo)
         return true;
     }
     else return false;
-}
-
-public function get_heroID($pdop)
-{
-    $pdop->prepare("SELECT hero_id FROM logindata WHERE login=?");
-    do poprawy
-    $pdop->execute($this->user);
 }
 
 public function send_sql($pdop)
