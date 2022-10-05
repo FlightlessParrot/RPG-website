@@ -127,7 +127,7 @@ $adminis->who_are_you($pdo, $loger, $guard);
 
 <!-- hero's page -->
 <form id="pageform">
-	
+<input type="" - do dokonczenia
 </form>
 </div>
 </div>
