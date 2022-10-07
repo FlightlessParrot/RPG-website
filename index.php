@@ -17,7 +17,7 @@ REQUIRE_ONCE 'pasek_logowania.php';
 
 <link href="style/style.css" type="text/css" rel="stylesheet">
 <script type="text/javascript" src="./dropdown.js"></script>
-
+<script type="text/javascript" src="./buildpages_skilL.js"></script>
 <?php
 // logujemy się / logging in ;)
 try
@@ -127,7 +127,11 @@ $adminis->who_are_you($pdo, $loger, $guard);
 
 <!-- hero's page -->
 <form id="pageform">
-<input type="" - do dokonczenia
+	<label for="heroname" id="hero_name" class="herospage" > Hero's name </label>
+	<input type="text" name="heroname" />
+	<script>
+		let build= skillBuilder.build();
+	</script>
 </form>
 </div>
 </div>
