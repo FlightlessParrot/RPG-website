@@ -1,8 +1,9 @@
 <?php
-
+INCLUDE_ONCE "./guardiam.php";
 class hpage_object
 {
 // This class needs hero ID given to work properly - it must be provided by sub class or other external function/method
+// you can get hero id by this class extension
 public $send_data;
 public $sql;
 public $table;
@@ -11,9 +12,10 @@ public $user;
 public $id;
 public $heroID;
 
-public function get_user_id($checker,$pdo)
+public function get_user_id($pdo)
 {
-    if($checker===true)
+    $checker=new paladin;
+    if($checker->check_user()===true)
     {
         $this->user=$_SESSION['login'];
         $pdo->prepare("SELECT id FROM logindata WHERE login=?");
@@ -33,6 +35,8 @@ $pdop->bindParam(':data', $this->send_data);
 $pdop->execute();
 }
 
+//form array into a sql command. 
+//needs array of collumn and array of data to work properly
 public function set_values($colum, $data)
 {
     $this->columns="(hero_ID";
@@ -52,6 +56,7 @@ public function set_values($colum, $data)
 
 }
 
+// it gives us hero's id, which identify hero
 class new_hero extends hpage_object
 {
     public $heroname;

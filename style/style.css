@@ -17,6 +17,11 @@ body
 	margin: auto;
  	}
 
+form div {
+	border: 5px solid black;
+	}	
+
+
 #karta {
 	background-image: url(../obraz/pergamin.webp);
 	background-color: rgba(224, 201, 166,1);

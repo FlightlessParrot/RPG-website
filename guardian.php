@@ -19,7 +19,6 @@ public function check_user()
             session_destroy();
             return false;
             }
-            
         }
         else return true;
     }

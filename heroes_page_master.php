@@ -9,7 +9,7 @@ $checker=$page_guard->check_user();
 if(isset($_POST['heroname']))
 {
 $myskills= new new_hero;
-if($myskills->get_user_id($checker, $pdo))
+if($myskills->get_user_id($pdo))
 {
 $myskills->heroname=$_POST['heroname'];
 

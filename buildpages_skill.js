@@ -5,13 +5,11 @@ const skillBuilder=
     'Devotion','Dexterity', 'Entertain','Fortitude','Guile','Intimidation','Intuition','Lore',
     'Medicine','Might','Nature','Reflexes','Stealth','Survival','Theology','Weapon Skill'],
 
-    location: document.getElementById('pageform'),
-    skilldiv: 0,
-
-    build: function()
+    buildSkillsContainer: function()
     {
+        this.location=document.getElementById('pageform')
         this.skilldiv= document.createElement('div')
-        this.location.appendChild(skilldiv)
+        this.location.appendChild(this.skilldiv)
 
         let skillBoxName=document.createElement('p')
         let skillBoxText= document.createTextNode('Skills')
@@ -21,13 +19,14 @@ const skillBuilder=
         this.skilldiv.classList.add('categorybox')
         skillBoxName.classList.add('categoryname')
 
-        skillBuilder.skills.forEach(skillBuilder.buildCheckbox)       
+        this.skills.forEach(skillBuilder.buildRadio)       
     },
 
-    buildCheckbox: function(element)
+    buildRadio: function(element)
     {
+        console.log(this)
         let div=document.createElement('div')
-        this.skillBoxText.appendChild(div)
+        skillBuilder.skilldiv.appendChild(div)
         div.classList.add("skillContainer")
 
         let textG=document.createElement('p')
@@ -60,7 +59,7 @@ const skillBuilder=
                 div.appendChild(y)
                 y.setAttribute("type", "radio")
                 y.setAttribute("name", name)
-                y.setAttribute("value", i)
+                y.setAttribute("value", i+1)
                 y.classList.add(classname)
             }
             x++
