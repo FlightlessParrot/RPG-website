@@ -104,7 +104,7 @@ $loger=new log_in($guard);
 //we do what we do - login div
 echo "<div>";
 $logerin=$loger->session_log($pdo);
-$loger->check_user($guard);
+$guard->check_user();
 $loger->nice_try($pdo);
 $loger->log_out($logerin);
 echo "</div>";
@@ -126,11 +126,12 @@ $adminis->who_are_you($pdo, $loger, $guard);
 <div style= "height: 1000px;">
 
 <!-- hero's page -->
-<form id="pageform">
-	<label for="heroname" id="hero_name" class="herospage" > Hero's name </label>
-	<input type="text" name="heroname" />
+<form id="pageform" method="post">
+	<label for="heroname_form" id="heroname_label" class="heroespage" > Hero's name </label>
+	<input type="text" id="heroname_form" name="heroname" maxlength="20" />
 	<script>
-		let build= skillBuilder.build();
+		let build = skillBuilder.build();
+
 	</script>
 </form>
 </div>

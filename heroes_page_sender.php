@@ -11,7 +11,7 @@ public $user;
 public $id;
 public $heroID;
 
-public function check_user_p($checker,$pdo)
+public function get_user_id($checker,$pdo)
 {
     if($checker===true)
     {
@@ -54,18 +54,18 @@ public function set_values($colum, $data)
 
 class new_hero extends hpage_object
 {
-    public $heroName;
+    public $heroname;
 
 public function new_hero($pdop)
 {
     $pdop->prepare("INSERT INTO names(user_ID,hero_name) VALUES (?,?)");
     $pdop->bindParam(1,$this->id[0]);
-    $pdop->bindParam(2,$this->heroName);
+    $pdop->bindParam(2,$this->heroname);
     $pdop->execute();
 
     $pdop->prepare("SELECT MAX(heroID) FROM names WHERE user_ID=? AND hero_name=?");
     $pdop->bindParam(1,$this->id[0]);
-    $pdop->bindParam(2,$this->heroName);
+    $pdop->bindParam(2,$this->heroname);
     $pdop->execute();
     $this->heroID=$pdop->fetch();
 }

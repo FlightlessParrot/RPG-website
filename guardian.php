@@ -9,8 +9,19 @@ public function guardian($evil)
 
 $pure=htmlspecialchars($evil);
 return $pure;
-
 }
-
+public function check_user()
+    {
+        if(((isset($_SESSION['login'])) || (isset($_SESSION['pass']))) && isset($_SESSION['rec']))
+        {
+            if(!($_SESSION['rec'] === $this->guardian($_SERVER['REMOTE_ADDR'].$_SERVER['HTTP_USER_AGENT'])))
+            {
+            session_destroy();
+            return false;
+            }
+            
+        }
+        else return true;
+    }
 }
 ?>

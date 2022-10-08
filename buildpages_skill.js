@@ -58,13 +58,12 @@ const skillBuilder=
             {
                 let y = document.createElement('input')
                 div.appendChild(y)
-                y.setAttribute("type", "checkbox")
+                y.setAttribute("type", "radio")
                 y.setAttribute("name", name)
                 y.setAttribute("value", i)
                 y.classList.add(classname)
-                x++
             }
-
+            x++
             classname="focusbox"
             name = element + "_focus"
 
