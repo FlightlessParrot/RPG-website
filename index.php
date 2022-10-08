@@ -96,7 +96,8 @@ session_regenerate_id();
 
 				//our login box
 				$loger = new log_in($guard);
-
+				
+				/* echo divy do zmiany*/
 				//we do what we do - login div
 				echo "<div>";
 				$logerin = $loger->session_log($pdo);
