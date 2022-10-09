@@ -71,9 +71,9 @@ function myEventer()
 
     function changeLi()
     {
-        const dcolor="black"
+        const dcolor="#16294A"
         this.style.backgroundColor="lightgrey";
-        this.style.color="black";
+        this.style.color="#16294A";
         this.style.backgroundImage="none";
         nextColor.call(this,dcolor);   
     } 

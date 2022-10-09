@@ -14,9 +14,12 @@ session_regenerate_id();
 	include_once 'guardian.php';
 	require_once 'admin_tool.php';
 	require_once 'pasek_logowania.php';
+	require_once 'heroes_page_sender.php';
 	?>
 
 	<link href="style/style.css" type="text/css" rel="stylesheet">
+	<link href="style/pages.css" type="text/css" rel="stylesheet">
+	<link href="style/dropdown.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="./dropdown.js"></script>
 	<script type="text/javascript" src="./buildpages_skilL.js"></script>
 	<?php
@@ -96,7 +99,7 @@ session_regenerate_id();
 
 				//our login box
 				$loger = new log_in($guard);
-				
+
 				/* echo divy do zmiany*/
 				//we do what we do - login div
 				echo "<div>";
@@ -117,10 +120,10 @@ session_regenerate_id();
 			</div>
 
 			<!-- obraz nagłówkowy/head image[my own translation :)] -->
-			<div id="naglowek"></div>
+			<div id="naglowek"><h1>Tworzenie karty postaci</h1></div>
 
 			<!-- kontrolna część -->
-			<div style="min-height: 1000px;">
+			<div id="content" style="min-height: 1000px;">
 
 				<!-- hero's page -->
 				<form id="pageform" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
@@ -132,6 +135,11 @@ session_regenerate_id();
 						skillBuilder.buildSkillsContainer();
 					</script>
 				</form>
+
+				<?php 
+				$checking=new hpage_object;
+				$checking->getskillsarray();
+				?>
 			</div>
 		</div>
 	</div>
