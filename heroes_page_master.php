@@ -1,18 +1,31 @@
 <?php
-INCLUDE_ONCE "./heroes_page_sender.php";
-INCLUDE_ONCE "./guardian.php";
+include_once "./heroes_page_sender.php";
+include_once "./guardian.php";
 
-function pagecontroler($pdo, $pdop)
+class page_master
 {
-    $page_guard = new paladin;
-    $checker = $page_guard->check_user();
-    if ($checker === true && isset($_POST['heroname'])) {
-        $myskills = new new_hero;
-        if ($myskills->get_user_id($pdo)) {
-            $myskills->heroname = $_POST['heroname'];
-            $myskills->add_hero($pdop);
-            unset($_POST['heroname']);
+    public $page_guard;
+    public $myskills;
+
+    function __construct()
+    {
+        $this->page_guard = new paladin;
+        $this->myskills = new new_hero;
+    }
+
+    public function pagecontroler($pdo, $pdop)
+    {
+
+        $checker = $this->page_guard->check_user();
+
+        if ($checker === true && isset($_POST['heroname'])) {
+            $hero_skills = $this->myskills;
+
+            if ($hero_skills->get_user_id($pdo)) {
+                $hero_skills->heroname = $_POST['heroname'];
+                $hero_skills->add_hero($pdop);
+                unset($_POST['heroname']);
+            }
         }
     }
 }
-?>

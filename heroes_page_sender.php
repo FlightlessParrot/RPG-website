@@ -1,5 +1,5 @@
 <?php
-INCLUDE_ONCE "./guardiam.php";
+INCLUDE_ONCE "./guardian.php";
 
 class hpage_object
 {
@@ -13,13 +13,13 @@ class hpage_object
     public $id;
     public $heroID;
     public $file="./JSON/skillsarray.json";
-    public $skillarray;
+    public $skillsarray;
 
-    public function getskillsarray()
+   function __construct()
     {
-        $opener= fopen($this->file, "r");
-        $json= fread($opener,filesize($this->file));
-        $this->skillarray=json_decode($json);
+        $opener = fopen($this->file, "r");
+        $json = fread($opener,filesize($this->file));
+        $this->skillsarray=json_decode($json);
     }
 
     public function get_user_id($pdo)
@@ -80,4 +80,3 @@ class new_hero extends hpage_object
         $this->heroID = $pdop->fetch();
     }
 }
-?>

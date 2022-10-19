@@ -20,7 +20,7 @@ const links={
 }
 //Menu categories
 
-const menuCategories=['Witaj podróżniku!','Witaj podróżniku!','Witaj podróżniku!','Witaj podróżniku!']
+const menuCategories=['The Mortal Realms','The Fellowship','My adventures','my room']
 
 // add my menu position
 class dropdownCreator{

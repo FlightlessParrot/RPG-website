@@ -1,12 +1,21 @@
 const skillBuilder=
 {
-    skills: 
-    ['Arcana','Athletics','Awareness','Ballistic Skill','Beast Handling', 'Channelling', 'Crafting', 'Determination',
-    'Devotion','Dexterity', 'Entertain','Fortitude','Guile','Intimidation','Intuition','Lore',
-    'Medicine','Might','Nature','Reflexes','Stealth','Survival','Theology','Weapon Skill'],
+    skills: 0,
+
+       callMe: async function()
+    {
+        const link ="./JSON/skillsarray.json";
+        //const request = new Request(link);
+        const fetcher = await fetch(link);
+        const skillsjson = await fetcher.json();
+        console.log(skillsjson)
+        skillBuilder.skills=skillsjson;
+        skillBuilder.buildSkillsContainer();
+    },
 
     buildSkillsContainer: function()
     {
+
         this.location=document.getElementById('pageform')
         this.skilldiv= document.createElement('div')
         this.location.appendChild(this.skilldiv)
@@ -19,10 +28,11 @@ const skillBuilder=
         this.skilldiv.classList.add('categorybox')
         skillBoxName.classList.add('categoryname')
 
-        this.skills.forEach(skillBuilder.buildRadio)       
+        this.skills.forEach(skillBuilder.buildbox)       
     },
 
-    buildRadio: function(element)
+ 
+    buildbox: function(element)
     {
         console.log(this)
         let greatdiv=document.createElement('div')
@@ -84,7 +94,7 @@ const skillBuilder=
                 {
                     inputdivf.appendChild(y)
                 }
-                y.setAttribute("type", "radio")
+                y.setAttribute("type", "checkbox")
                 y.setAttribute("name", name)
                 y.setAttribute("value", (i+1))
                 y.classList.add(classname)
