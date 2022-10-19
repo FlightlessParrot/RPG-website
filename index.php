@@ -49,7 +49,7 @@ session_regenerate_id();
 			<!-- menu-->
 			<nav>
 				<button class="menu" href="index.php" onmouseover="dropButton.showDropdown('first_drop')" onmouseout="dropButton.hideDropdown('first_drop')">
-					<span>Witaj podróżniku!</span>
+					The Mortal Realms
 				</button>
 				<ul id="first_drop" class="dropdown" onmouseover="dropButton.showDropdown('first_drop')" onmouseout="dropButton.hideDropdown('first_drop')">
 					<script>
@@ -58,7 +58,7 @@ session_regenerate_id();
 				</ul>
 
 				<button class="menu" onmouseover="dropButton.showDropdown('second_drop')" onmouseout="dropButton.hideDropdown('second_drop')">
-					<span>Witaj podróżniku!</span>
+					The Fellowship
 				</button>
 
 				<ul id="second_drop" class="dropdown" onmouseover="dropButton.showDropdown('second_drop')" onmouseout="dropButton.hideDropdown('second_drop')">
@@ -68,7 +68,7 @@ session_regenerate_id();
 				</ul>
 
 				<button class="menu" onmouseover="dropButton.showDropdown('third_drop')" onmouseout="dropButton.hideDropdown('third_drop')">
-					<span>Witaj podróżniku!</span>
+					My adventures
 				</button>
 
 				<ul id="third_drop" class="dropdown" onmouseover="dropButton.showDropdown('third_drop')" onmouseout="dropButton.hideDropdown('third_drop')">
@@ -78,7 +78,7 @@ session_regenerate_id();
 				</ul>
 
 				<button class="menu" onmouseover="dropButton.showDropdown('fourth_drop')" onmouseout="dropButton.hideDropdown('fourth_drop')">
-					<span>Witaj podróżniku!</span>
+					My account
 				</button>
 
 				<ul id="fourth_drop" class="dropdown" onmouseover="dropButton.showDropdown('fourth_drop')" onmouseout="dropButton.hideDropdown('fourth_drop')">
@@ -93,7 +93,7 @@ session_regenerate_id();
 			<div id="div_logowania">
 
 				<?php
-
+				
 				// some defence against black magic
 				$guard = new paladin();
 
@@ -120,7 +120,9 @@ session_regenerate_id();
 			</div>
 
 			<!-- obraz nagłówkowy/head image[my own translation :)] -->
-			<div id="naglowek"><h1>Tworzenie karty postaci</h1></div>
+			<div id="naglowek">
+				<h1>Tworzenie karty postaci</h1>
+			</div>
 
 			<!-- kontrolna część -->
 			<div id="content" style="min-height: 1000px;">
@@ -129,17 +131,63 @@ session_regenerate_id();
 				<form id="pageform" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 					<div class="hero_character">
 						<label for="heroname_form" id="heroname_label" class="heroespage"> Hero's name </label>
-						<input type="text" id="heroname_form" name="heroname" maxlength="20" width="20" />
+						<input type="text" id="heroname_form" name="heroname" maxlength="20" size="20" />
+						</br>
+						
+						</br>
+						<hr>
 					</div>
+					<fieldset id="narrativehero">
+						<legend>Narrative Elements</legend>
+
+						<label for="speciesinput" class="fablabel"> Species</label>
+						<select id="speciesinput" class="herotextinput" name="species">
+							<option value="human">Human</option>
+							<option value="sc">Stormcast Eternal</option>
+							<option value="aelf">Aelf</option>
+							<option value="idoneth">Idoneth Deepkin</option>
+							<option value="dwarf">Dwarf</option>
+							<option value="Sylvaneth">Sylvaneth</option>
+							<option value="skink">Skink</option>
+							<option value="saurus">Saurus</option>
+						</select>
+						
+						
+						<label for="archetypeinput" class="fablabel"> Archetype</label>
+						<input type="text" id="archetypeinput" class="herotextinput" name="archetype" maxlength="20" size="20" />
+						
+						<label for="ageinput" class="fablabel"> Age</label>
+						<input type="number" id="ageinput" class="herotextinput" name="age" maxlength="10" size="10" />
+
+						<label for="heightinput" class="fablabel"> Height</label>
+						<input type="number" id="heightinput" class="herotextinput" name="height" maxlength="10" size="10" />
+
+						<label for="weightinput" class="fablabel"> Weight</label>
+						<input type="number" id="weightinput" class="herotextinput" name="weight" maxlength="10" size="10" />
+						
+						<label for="eyesinput" class="fablabel"> Eyes</label>
+						<input type="text" id="eyesinput" class="eyesinput" name="eyes" maxlength="10" size="10" />
+						<label for="hairinput" class="fablabel"> Hair</label>
+						<input type="text" id="hairinput" class="herotextinput" name="hair" maxlength="20" size="20" />
+
+
+						<br>
+						<label for="distinguishinput" class="fablabel">Distinguishing Features</label>
+						<input type="text" id="distinguishinput" class="herotextinput" name="archetype" maxlength="50" size="50" />
+
+						<textarea
+
+					</fieldset>
 					<script>
-						skillBuilder.buildSkillsContainer();
+						skillBuilder.callMe();
 					</script>
+
 				</form>
 
-				<?php 
-				$checking=new hpage_object;
-				$checking->getskillsarray();
+				<?php
+				$checking = new hpage_object;
 				?>
+
 			</div>
 		</div>
 	</div>
