@@ -52,6 +52,9 @@ a {
 	text-decoration: none;
 }
 
+hr{
+	border-color: #12223D;
+}
 .menu {
 	flex-basis: 25%;
 	flex-grow: 1;
@@ -89,12 +92,6 @@ a {
 	margin-left: 2em;
 	}
 
-.important_message{
-	color:red;
-	font-weight: bolder;
-	display: flex;
-	justify-content: flex-end;
-	}
 
 #pasek_logowania{	
 	width:100%;
@@ -107,9 +104,10 @@ a {
 	margin-bottom: 1em;
 	}
 
-input.login_row{
+ .login_row{
 	margin-right: 1em;
 	margin-left: 0.3em;
+	color: lightgray;
 	}
 
 	#content{

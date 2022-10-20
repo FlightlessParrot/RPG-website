@@ -1,57 +1,119 @@
+[type="submit"] {
+  background-color: #6a83b0;
+  border-color: #3c4a63;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 3px;
+  color: lightgrey;
+  box-shadow: 0px 0px 30px lightblue;
+  padding: 5px 10px 5px 10px;
+}
 
+fieldset{
+    border-color: #223e70;
+    border-style: dotted;
+}
 
-
+input,
+textarea,
+select {
+  background-color: rgb(0, 0, 0, 0.2);
+  color: #223e70;
+}
 .categorybox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    column-gap: 15px;
-    row-gap: 10px;
+  color: #16294a;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 15px;
+  row-gap: 10px;
 }
-.categoryname{
-    color: #16294A;
-    flex-basis: 100%;
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    border-bottom: 2px solid #16294A;
-    margin: 20px 70px 20px 70px;
+.categoryname {
+  color: #16294a;
+  flex-basis: 100%;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  border-bottom: 2px solid #16294a;
+  margin: 60px 70px 20px 70px;
 }
-.skillcontainer {
-    font-size: 0.8em;
-    display:flex;
-    justify-content: space-around;
-    column-gap: 10px;
-    flex-basis: 30%;
-    border: 3px solid #12223D;
-    background-color: #3C4A63;
+
+#narrativehero {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#narrativehero > div {
+  border-right: 2px solid #12223d;
+  border-bottom: 2px solid #12223d;
+  border-radius: 15px;
+  margin: 6px 8px 8px 6px;
+  padding: 5px 8px 5px 8px;
+}
+
+.narrativearea {
+  flex-basis: 40%;
+}
+
+.narrativearea * {
+  display: flex;
+  justify-content: center;
+}
+.mainchdiv{
+    border-right: 2px solid #12223d;
+    border-bottom: 2px solid #12223d;
     border-radius: 15px;
-    color: lightgray;
+    margin: 6px 8px 8px 6px;
+    padding: 8px 12px 12px 12px;
+}
+.charlabel{
+    font-size: 2.5em;
 }
 
-.skillname { 
-    flex-basis: 33%;
-    align-self: center;
-    text-align: center;
-    font-weight: bold;
-    font-size: 0.9em;
-    border-right: 2px dotted #12223D;
-    padding: 3px 5px 3px 0px;
-    margin: 3px 0 3px 4px;
+.maincharacteristic {
+  width: 130px;
+  font-size: 4em;
+  text-align: center;
 }
 
-.focusdiv, .traindiv{
- padding: 0 3px 7px 0;
+.skillcontainer {
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-around;
+  column-gap: 10px;
+  flex-basis: 30%;
+  border: 3px solid #12223d;
+  background-color: #3c4a63;
+  border-radius: 15px;
+  color: lightgray;
+}
+
+.skillname {
+  flex-basis: 33%;
+  align-self: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9em;
+  border-right: 2px dotted #12223d;
+  padding: 3px 5px 3px 0px;
+  margin: 3px 0 3px 4px;
+}
+
+.focusdiv,
+.traindiv {
+  padding: 0 3px 7px 0;
 }
 
 .skillab {
-    display: block;
-    margin: 5px 0 0 0;
-    padding-top: 2px;
-    text-align: center;
-   
+  display: block;
+  margin: 5px 0 0 0;
+  padding-top: 2px;
+  text-align: center;
 }
-.inputdivf, .inputdivt{
-    margin-top: 5px;
-    padding-top: 2px;
+.inputdivf,
+.inputdivt {
+  margin-top: 5px;
+  padding-top: 2px;
 }
