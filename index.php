@@ -225,7 +225,22 @@ session_regenerate_id();
 					<script>
 						skillBuilder.callMe();
 					</script>
+					<div>
+					<fieldset class="narrativearea">		
+								<legend>Talents</legend>
 
+							<div>
+								<label for="talentname">Talent name</label>
+								<input type="text" id="talentname" name="talentname" maxlength="40" size="30" />
+							</div>
+
+							<textarea id="talentsdescription" cols="50" rows="20" name="t_descrption"></textarea>
+						</fieldset>
+
+						<fieldset id="spellsfield" class="narrativearea">
+							
+						</fieldset>
+					<div>
 				</form>
 
 				<?php
