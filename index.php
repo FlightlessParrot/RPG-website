@@ -226,7 +226,7 @@ session_regenerate_id();
 						skillBuilder.callMe();
 					</script>
 					<div>
-					<fieldset class="narrativearea">		
+					<fieldset id="talentsFieldset" class="narrativearea">		
 								<legend>Talents</legend>
 
 							<div>
