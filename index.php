@@ -20,8 +20,10 @@ session_regenerate_id();
 	<link href="style/style.css" type="text/css" rel="stylesheet">
 	<link href="style/pages.css" type="text/css" rel="stylesheet">
 	<link href="style/dropdown.css" type="text/css" rel="stylesheet">
+	<link href="style/addtalent.css" type="text/css" rel="stylesheet">
 	<script type="text/javascript" src="./dropdown.js"></script>
 	<script type="text/javascript" src="./buildpages_skilL.js"></script>
+	<script type="text/javascript" src="./addtalent.js"></script>
 	<?php
 	// logujemy się / logging in ;)
 	try {
@@ -196,14 +198,14 @@ session_regenerate_id();
 							<label for="backgroundinput" class="fablabel">
 								<legend>Background</legend>
 							</label>
-							<textarea id="backgroundinput" cols="50" rows="20" name="background"></textarea>
+							<textarea id="backgroundinput" cols="45" rows="20" name="background"></textarea>
 						</fieldset>
 
 						<fieldset class="narrativearea">
 							<label for="goalsinput" class="fablabel">
 								<legend>Goals</legend>
 							</label>
-							<textarea id="goalsinput" cols="50" rows="20" name="goals"></textarea>
+							<textarea id="goalsinput" cols="45" rows="20" name="goals"></textarea>
 						</fieldset>
 					</div>
 					<!-- page 2-->
@@ -225,22 +227,18 @@ session_regenerate_id();
 					<script>
 						skillBuilder.callMe();
 					</script>
-					<div>
-					<fieldset id="talentsFieldset" class="narrativearea">		
+					<div id="talentdiv">
+					<fieldset id="talentsFieldset">		
 								<legend>Talents</legend>
-
-							<div>
-								<label for="talentname">Talent name</label>
-								<input type="text" id="talentname" name="talentname" maxlength="40" size="30" />
-							</div>
-
-							<textarea id="talentsdescription" cols="50" rows="20" name="t_descrption"></textarea>
 						</fieldset>
-
-						<fieldset id="spellsfield" class="narrativearea">
+						<script>
+						const talents=new talentsCreator('talentsFieldset')
+						talents.addButtons()
+						</script>
+					<div>
+						<fieldset id="spellsfield">
 							
 						</fieldset>
-					<div>
 				</form>
 
 				<?php

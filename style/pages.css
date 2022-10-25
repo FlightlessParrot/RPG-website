@@ -1,25 +1,8 @@
-[type="submit"] {
-  background-color: #6a83b0;
-  border-color: #3c4a63;
-  border-radius: 15px;
-  border-style: solid;
-  border-width: 3px;
-  color: lightgrey;
-  box-shadow: 0px 0px 30px lightblue;
-  padding: 5px 10px 5px 10px;
+
+.fablabel{
+  margin: 2px 5px 2px 7px;
 }
 
-fieldset{
-    border-color: #223e70;
-    border-style: dotted;
-}
-
-input,
-textarea,
-select {
-  background-color: rgb(0, 0, 0, 0.2);
-  color: #223e70;
-}
 .categorybox {
   color: #16294a;
   display: flex;
@@ -42,7 +25,7 @@ select {
   flex-basis: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: left;
 }
 
 #narrativehero > div {
@@ -53,14 +36,6 @@ select {
   padding: 5px 8px 5px 8px;
 }
 
-.narrativearea {
-  flex-basis: 40%;
-}
-
-.narrativearea * {
-  display: flex;
-  justify-content: center;
-}
 .mainchdiv{
     border-right: 2px solid #12223d;
     border-bottom: 2px solid #12223d;

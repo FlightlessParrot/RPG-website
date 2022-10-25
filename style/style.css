@@ -1,117 +1,140 @@
+body {
+  background-color: #010814;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
 
-
-body 
-	{
-	background-color:#010814;
-	margin: 0 0 0 0;
-	padding: 0 0 0 0;
-	}
-
-#tlo
-	{
-	background-image: url(../obraz/night.jpg);
-	background-attachment: fixed;
-	background-size: cover;
-	background-repeat: repeat-y;
-	background-position: center;
-	margin: auto;
- 	}
+#tlo {
+  background-image: url(../obraz/night.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat-y;
+  background-position: center;
+  margin: auto;
+}
 
 #karta {
-	background-image: url(../obraz/pergamin.webp);
-	background-color: rgba(224, 201, 166,1);
-	min-height: 100%;
-	width: 60em;
-	margin: auto;
-	}
+  background-image: url(../obraz/pergamin.webp);
+  background-color: rgba(224, 201, 166, 1);
+  min-height: 100%;
+  width: 60em;
+  margin: auto;
+}
 
 nav {
-	display: flex;
-	flex-wrap: nowrap;
-	height: 4em;
-	width: 100%;
-	position: sticky;
-	top: 0px;
-	left: 0px;
-	box-shadow: 0px 13px 8px #010814;
-	}
+  display: flex;
+  flex-wrap: nowrap;
+  height: 4em;
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0px 13px 8px #010814;
+}
 
 #naglowek {
-	margin: 20px 20px 20px 20px;
-	padding: 20px 20px 20px 20px;
-	text-align: center;
-	color:#16294A;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	border-bottom:4px solid #010814;
-	border-radius: 15px;
-	}
-
-
-a {
-	color: lightgray;
-	text-decoration: none;
+  margin: 20px 20px 20px 20px;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  color: #16294a;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-bottom: 4px solid #010814;
+  border-radius: 15px;
+}
+[type="submit"] {
+  background-color: #6a83b0;
+  border-color: #3c4a63;
+  border-radius: 15px;
+  border-style: solid;
+  border-width: 3px;
+  color: lightgrey;
+  box-shadow: 0px 0px 30px lightblue;
+  padding: 5px 10px 5px 10px;
 }
 
-hr{
-	border-color: #12223D;
+fieldset {
+  margin: 5px 2px 2px 2px;
+  border-color: #223e70;
+  border-style: dotted;
 }
+
+fieldset * {
+  display: flex;
+  justify-content: center;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+input,
+textarea,
+select {
+  background-color: rgb(0, 0, 0, 0.2);
+  color: #12223d;
+  font-size: 1.1em;
+}
+
+hr {
+  border-color: #12223d;
+}
+
 .menu {
-	flex-basis: 25%;
-	flex-grow: 1;
+  flex-basis: 25%;
+  flex-grow: 1;
 
-	background-image:linear-gradient(to bottom,#12223D,black) ;
+  background-image: linear-gradient(to bottom, #12223d, black);
 
-	text-decoration: none;
+  text-decoration: none;
 
-	border: 0,5em solid black;
-	margin: 0 0 0 0;
-	padding-top: 0.7em;
+  border: 0, 5em solid black;
+  margin: 0 0 0 0;
+  padding-top: 0.7em;
 
-	text-align: center;
-	font-family: verdana;
-	font-size: 1.2em;
-	font-weight: bold;
-	color: lightgray;
-	}
+  text-align: center;
+  font-family: verdana;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: lightgray;
+}
 
+#div_logowania {
+  background-image: none;
+  background-image: linear-gradient(to bottom, black, #12223d);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: lightgray;
+  padding: 0.5em 1em 0em 1em;
+  margin: 0 0 0 0;
+  display: flex;
+  flex-wrap: nowrap;
+  box-shadow: 0px 18px 15px #010814;
+}
 
-#div_logowania{
-	background-image: none;
-	background-image:linear-gradient(to bottom,black,#12223D) ;
-	border-bottom-left-radius: 30px;
-	border-bottom-right-radius: 30px;
-	color: lightgray;
-	padding: 0.5em 1em 0em 1em;
-	margin: 0 0 0 0; 
-	display: flex;
-	flex-wrap: nowrap;
-	box-shadow: 0px 18px 15px #010814;
-	}
+#div_logowania div {
+  margin-left: 2em;
+}
 
-#div_logowania div{
-	margin-left: 2em;
-	}
+#pasek_logowania {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  padding-top: 0.5em;
+  padding-right: 1em;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
 
+.login_row {
+  margin-right: 1em;
+  margin-left: 0.3em;
+  color: lightgray;
+}
 
-#pasek_logowania{	
-	width:100%;
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
-	padding-top: 0.5em;
-	padding-right: 1em;
-	font-size: 1.2em;
-	margin-bottom: 1em;
-	}
-
- .login_row{
-	margin-right: 1em;
-	margin-left: 0.3em;
-	color: lightgray;
-	}
-
-	#content{
-		padding: 30px;
-		color:#0F1C33;
-		font-family: Verdana, Geneva, Tahoma, sans-serif;
-	}
+#content {
+  padding: 30px;
+  color: #0f1c33;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

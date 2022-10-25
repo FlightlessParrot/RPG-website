@@ -34,7 +34,6 @@ const skillBuilder=
  
     buildbox: function(element)
     {
-        console.log(this)
         let greatdiv=document.createElement('div')
         skillBuilder.skilldiv.appendChild(greatdiv)
         greatdiv.classList.add("skillcontainer")
