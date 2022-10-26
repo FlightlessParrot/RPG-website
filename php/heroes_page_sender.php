@@ -1,5 +1,5 @@
 <?php
-INCLUDE_ONCE "./guardian.php";
+//INCLUDE_ONCE "./guardian.php";
 
 class hpage_object
 {
