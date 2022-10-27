@@ -1,7 +1,6 @@
 .buttonsdiv{
     display: flex;
     justify-content: space-between;
-    
 }
 
 .addButton, .removeButton{

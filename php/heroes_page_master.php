@@ -1,7 +1,5 @@
 <?php
-include_once "./heroes_page_sender.php";
-include_once "./guardian.php";
-
+require_once './php/heroes_page_sender.php';
 class page_master
 {
     public $page_guard;

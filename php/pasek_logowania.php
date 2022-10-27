@@ -1,13 +1,11 @@
 <?php
 
-
 class log_in
 {
    function __construct($quard)
     {
     if((isset($_POST['login'])) && (isset($_POST['pass'])))
-    {
-        
+    {        
         $santlog=$quard->guardian($_POST['login']);
         $santpass=$quard->guardian($_POST['pass']);
 
@@ -17,7 +15,6 @@ class log_in
         $_SESSION['login']=$santlog;
         $_SESSION['pass']=$santpass;
         $_SESSION['rec']=$quard->guardian($_SERVER['REMOTE_ADDR'].$_SERVER['HTTP_USER_AGENT']);
-
     }
     }
 
@@ -56,10 +53,10 @@ class log_in
     echo <<<HEREDOC
     <form id="pasek_logowania" action="$_SERVER[PHP_SELF]" method="post">
     <span class="login_row">login:</span>
-    <input type="text" name="login" class="login_row" size="20" maxlength="20">
+    <input class="login_input" type="text" name="login" class="login_row" size="20" maxlength="20">
     <span class="login_row">hasło:</span>
-    <input type="password" name="pass" class="login_row" size="20" maxlength="20">
-    <input type="submit" id="zaloguj" value="zaloguj">
+    <input class="login_input" type="password" name="pass" class="login_row" size="20" maxlength="20">
+    <input id="zaloguj" type="submit" id="zaloguj" value="zaloguj">
     </form>
     HEREDOC;
     
@@ -90,7 +87,6 @@ class log_in
         session_unset();
         return true;
         }
-
         }
         else return false;
         

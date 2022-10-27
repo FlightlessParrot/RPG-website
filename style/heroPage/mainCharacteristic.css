@@ -1,0 +1,17 @@
+
+.mainchdiv{
+    border-right: 2px solid #12223d;
+    border-bottom: 2px solid #12223d;
+    border-radius: 15px;
+    margin: 6px 8px 8px 6px;
+    padding: 8px 12px 12px 12px;
+}
+.charlabel{
+    font-size: 2.5em;
+}
+
+.maincharacteristic {
+  width: 130px;
+  font-size: 4em;
+  text-align: center;
+}

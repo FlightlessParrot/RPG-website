@@ -1,0 +1,45 @@
+
+#div_logowania {
+    background-image: linear-gradient(to bottom, black, #12223d);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: lightgray;
+    padding: 15px 1em 0em 1em;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: 0px 18px 15px #010814;
+  }
+  
+  #pasek_logowania {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    padding-top: 0.5em;
+    padding-right: 1em;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  
+  .login_row {
+    margin-right: 1em;
+    margin-left: 2em;
+    color: lightgray;
+  }
+  
+  #content {
+    padding: 30px;
+    color: #0f1c33;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  #zaloguj{
+    font-size: medium;
+    margin-left: 30px;
+    height: fit-content;
+  }
+  .login_input{
+    font-size: 1em;
+    height:fit-content;
+  }
