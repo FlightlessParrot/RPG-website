@@ -36,6 +36,11 @@
 	cursor:pointer;
 	}
 
+.dropdownli p{
+	margin-top: "0.5em";
+	display: "inline-block";
+}
+
 .menucanvas{
 	display: none;
 	position: absolute;

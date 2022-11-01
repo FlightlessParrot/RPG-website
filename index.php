@@ -27,7 +27,7 @@ session_regenerate_id();
 	<link href="style/heroPage/narrative.css" type="text/css" rel="stylesheet">
 	<link href="style/heroPage/skills.css" type="text/css" rel="stylesheet">
 
-	<script type="text/javascript" src="js/dropdown.js"></script>
+	<script type="module" src="js/dropdown.js"></script>
 	<script type="module" src='js/createTalentsTop.js'></script>
 	
 
@@ -37,11 +37,8 @@ session_regenerate_id();
 	<div id="tlo">
 		<div id="karta">
 			<!-- pasek logowania -->
-			<?php
-			include_once "./php/navigation.php";
-			?>
+			<nav></nav>
 			<div id="div_logowania">
-				
 				<?php
 				
 				// some defence against black magic
@@ -50,7 +47,6 @@ session_regenerate_id();
 				//our login box
 				$loger = new log_in($guard);
 
-				
 				//we do what we do - login div
 				$logerin = $loger->session_log($pdo);
 				$guard->check_user();
@@ -58,7 +54,6 @@ session_regenerate_id();
 				$loger->log_out($logerin);
 				$loger->change_password($loger, $pdo, $guard);
 				
-
 				//admin panel
 				$adminis = new god;
 				$adminis->who_are_you($pdo, $loger, $guard);
@@ -72,7 +67,6 @@ session_regenerate_id();
 
 			<!-- kontrolna część -->
 			<div id="content" style="min-height: 1000px;">
-
 				<!-- hero's page -->
 				<?php
 				include './php/heroPage.php';
@@ -81,10 +75,7 @@ session_regenerate_id();
 			</div>
 		</div>
 	</div>
-	<script>
-		eye.createMenuCanvas()
-		myEventer()
-	</script>
+	
 </body>
 
 </html>

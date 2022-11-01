@@ -7,11 +7,10 @@ class talentsCreator {
     this.location = document.getElementById(this.id);
     this.counter = 0;
     this.parentlocation = this.location.parentNode;
-    this.addButtons = addButtons;
+    this.addButtons = addButtons.bind(this,this.addHandler, this.removeHandler);
   }
 
   addHandler() {
-    console.log('działam')
     const talent = document.createElement("div");
     talent.classList.add("talent");
 
@@ -70,7 +69,6 @@ class talentsCreator {
   }
 
   removeHandler() {
-    console.log(this)
     if (this.counter > 0) {
       const talents = this.location.lastElementChild;
       talents.remove();

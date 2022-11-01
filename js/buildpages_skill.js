@@ -8,7 +8,6 @@ const skillBuilder=
         //const request = new Request(link);
         const fetcher = await fetch(link);
         const skillsjson = await fetcher.json();
-        console.log(skillsjson)
         skillBuilder.skills=skillsjson;
         skillBuilder.buildSkillsContainer();
     },
