@@ -1,6 +1,6 @@
 import {halo} from './haloHandler.js'
 
-function addButtons(addHandler, removeHandler)
+function addButtons(addHandler, removeHandler,parentlocation)
 {
   //create buttons' elements
   const buttonsdiv = document.createElement("div");
@@ -34,7 +34,7 @@ function addButtons(addHandler, removeHandler)
   removeButton.addEventListener("click", that);
   buttonsdiv.appendChild(removeButton);
   buttonsdiv.appendChild(addButton);
-  this.parentlocation.appendChild(buttonsdiv);
+  parentlocation.appendChild(buttonsdiv);
 }
 
 export {addButtons as default}

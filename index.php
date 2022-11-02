@@ -26,9 +26,12 @@ session_regenerate_id();
 	<link href="style/heroPage/mainCharacteristic.css" type="text/css" rel="stylesheet">
 	<link href="style/heroPage/narrative.css" type="text/css" rel="stylesheet">
 	<link href="style/heroPage/skills.css" type="text/css" rel="stylesheet">
+	<link href="style/heroPage/buttons.css" type="text/css" rel="stylesheet">
+	<link href="style/heroPage/addspells.css" type="text/css" rel="stylesheet">
 
 	<script type="module" src="js/dropdown.js"></script>
 	<script type="module" src='js/createTalentsTop.js'></script>
+	<script type="module" src='js/createSpellsTop.js'></script>
 	
 
 	<title>RPG Web</title>

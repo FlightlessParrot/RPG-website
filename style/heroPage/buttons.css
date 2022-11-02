@@ -1,0 +1,38 @@
+
+.buttonsdiv{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2px 0 2px;
+    border-color: #223e70;
+    border-style: dotted;
+    border-top: none;
+    border-width: 2px;}
+
+.addButton, .removeButton{
+    border: 2px solid #12223d;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 5px 8px 5px 8px;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color:#12223d;
+}
+
+.addButton{
+    background-color: green;
+}
+
+.removeButton{
+    font-size: 2em;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    
+}
+
+.removeButton p{
+    margin: 0 0 0 0;
+    padding: 0 0 3px 1px;
+    text-align: right;
+}

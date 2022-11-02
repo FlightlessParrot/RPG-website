@@ -7,7 +7,8 @@ class talentsCreator {
     this.location = document.getElementById(this.id);
     this.counter = 0;
     this.parentlocation = this.location.parentNode;
-    this.addButtons = addButtons.bind(this,this.addHandler, this.removeHandler);
+    this.addButtons = addButtons.bind(this);
+    this.addButtons(this.addHandler, this.removeHandler, this.parentlocation)
   }
 
   addHandler() {

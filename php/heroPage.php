@@ -98,12 +98,15 @@
     <script>
         skillBuilder.callMe();
     </script>
+    <!--page 3-->
     <div id="talentdiv">
     <fieldset id="talentsFieldset">		
                 <legend>Talents</legend>
         </fieldset>
     </div>
+    <div>
         <fieldset id="spellsfield">
-            
+        <legend>Spells</legend>
         </fieldset>
+</div>
 </form>

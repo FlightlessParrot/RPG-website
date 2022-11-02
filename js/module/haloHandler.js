@@ -17,9 +17,6 @@ class halo {
     let property =
       "0px 0px " + this.blur + "px " + this.spread + "px " + this.color;
     this.object.style.boxShadow = property;
-    console.log(
-      "0px 0px " + this.spread + "px " + this.blur + "px " + this.color
-    );
     this.spread++;
     this.blur += 5;
     if (this.spread >= this.maxSpread) {

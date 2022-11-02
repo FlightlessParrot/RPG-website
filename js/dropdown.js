@@ -39,8 +39,9 @@ const createNav={
         dropdownCreator(this.menuID[x], dropMenu.links[y], dropMenu.names[z])
     
     }
+    eye.createMenuCanvas()
+    myEventer()
     }
 }
 createNav.builder();
-eye.createMenuCanvas()
-myEventer()
+
