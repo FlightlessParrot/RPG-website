@@ -1,34 +1,42 @@
-#spellsfield{
-    align-items: flex-start;
-    border-bottom: none;
+#spellsfield {
+  align-items: flex-start;
+  border-bottom: none;
 }
 
-.spell{
-    padding: 10px 0px 10px 0px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    border-bottom: 2px solid #12223d;;
+.spell {
+  padding: 10px 0px 10px 0px;
+  margin: 20px 0px 20px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border-bottom: 2px solid #12223d;
 }
-.spell > div{
-    padding: 2px 2px 2px 2px;
-    margin: 2px 2px 2px 10px;
+.spell>div {
+  padding: 2px 2px 2px 2px;
+  margin: 2px 2px 2px 10px;
 }
+.spell>div:last-of-type {
+    flex-grow: 1;
+  }
+  
+  .spell > div:first-child{
+      flex-basis: 100%;
+      font-weight: bold;
+      justify-content: flex-start;
+  }
 
-.inputSpellCost, .inputSpellRange{
-    width: 50px;
+.inputSpellCost,
+.inputSpellRange {
+  width: 70px;
 }
 .inputSpellTarget {
-    width: 200px;
+  width: 200px;
 }
 
-.inputSpellDuration{
-    width: 100px;
+.inputSpellDuration {
+  width: 150px;
 }
-.inputSpellEffect{
-    width: 500px
-}
-.spell>div:last-of-type{
-    flex-grow: 1;
-    justify-content: flex-start;
+.inputSpellEffect {
+  min-width: 300px;
+  flex-grow: 4;
 }
