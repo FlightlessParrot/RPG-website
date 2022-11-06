@@ -1,3 +1,4 @@
+import removeHandler from './removeHandler.js';
 import addButtons from './addButton.js'
 export {talentsCreator}
 
@@ -8,6 +9,7 @@ class talentsCreator {
     this.counter = 0;
     this.parentlocation = this.location.parentNode;
     this.addButtons = addButtons.bind(this);
+    this.removeHandler= removeHandler.bind(this, this.location);
     this.addButtons(this.addHandler, this.removeHandler, this.parentlocation)
   }
 
@@ -69,15 +71,4 @@ class talentsCreator {
     this.counter++;
   }
 
-  removeHandler() {
-    if (this.counter > 0) {
-      const talents = this.location.lastElementChild;
-      talents.remove();
-      this.counter--;
-      return true;
-    } 
-    else {
-      return false;
-    } 
-  }
 }

@@ -94,10 +94,11 @@
             <label for="soulinput" class="charlabel"> Soul</label>
             <input type="number" id="soulinput" class="maincharacteristic" name="soul" maxlength="3" size="3" min="0"/>
         </div>
-    </div>
+     </div>
     <script>
         skillBuilder.callMe();
     </script>
+   
     <!--page 3-->
     <div id="talentdiv">
     <fieldset id="talentsFieldset">		
@@ -108,5 +109,9 @@
         <fieldset id="spellsfield">
         <legend>Spells</legend>
         </fieldset>
-</div>
+    </div>
+    
+    <fieldset id="inventory">
+       
+    </fieldset>
 </form>

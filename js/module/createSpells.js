@@ -1,3 +1,4 @@
+import removeHandler from "./removeHandler.js";
 import addButtons from "./addButton.js";
 class spells
 {
@@ -7,6 +8,7 @@ class spells
         this.counter = 0;
         this.parentlocation = this.location.parentNode;
         this.addButtons = addButtons.bind(this);
+        this.removeHandler= removeHandler.bind(this, this.location)
         this.addButtons(this.addHandler, this.removeHandler, this.parentlocation);
 
       }
@@ -23,12 +25,12 @@ class spells
         const duration = document.createElement("div")
         const effect = document.createElement("div")*/
         //name
-        this.addName(spell, labelClass, 'inputSpellName', 'Name')
-        this.addName(spell, labelClass, 'inputSpellCost', 'DN/Cost')
-        this.addName(spell, labelClass, 'inputSpellTarget', 'Target')
-        this.addName(spell, labelClass, 'inputSpellRange', 'Range')
-        this.addName(spell, labelClass, 'inputSpellDuration', 'Duration')
-        this.addName(spell, labelClass, 'inputSpellEffect', 'Effect')
+        this.addName(spell, labelClass, 'inputSpellName', 'Name', 'spellName')
+        this.addName(spell, labelClass, 'inputSpellCost', 'DN/Cost', 'spellCost')
+        this.addName(spell, labelClass, 'inputSpellTarget', 'Target', 'spellTarget')
+        this.addName(spell, labelClass, 'inputSpellRange', 'Range', 'spellRange')
+        this.addName(spell, labelClass, 'inputSpellDuration', 'Duration', 'spellDuration')
+        this.addName(spell, labelClass, 'inputSpellEffect', 'Effect', 'spellEffect')
        /* const costText = document.createTextNode('Cost')
         const costLabel = document.createElement("label")
         const costInput= document.createElement("input")
@@ -49,7 +51,7 @@ class spells
     
         this.counter++;
       }
-      addName(spell,labelClass, inputClass, textNode){
+      addName(spell,labelClass, inputClass, textNode, dataName){
         const name = document.createElement("div")
         const nameInputID=inputClass+this.counter
         const nameText = document.createTextNode(textNode)
@@ -59,7 +61,7 @@ class spells
         nameInput.setAttribute('id', nameInputID)
         nameInput.classList.add(inputClass)
         nameInput.setAttribute("type", 'text')
-
+        nameInput.setAttribute("name", dataName+'[]')
         nameLabel.setAttribute('for', nameInputID)
         nameLabel.classList.add(labelClass)
 
@@ -70,17 +72,6 @@ class spells
         spell.appendChild(name)
       }
 
-      removeHandler() {
-        if (this.counter > 0) {
-          const talents = this.location.lastElementChild;
-          talents.remove();
-          this.counter--;
-          return true;
-        } 
-        else {
-          return false;
-        } 
-      }
-
+     
 }
 export {spells as default}
