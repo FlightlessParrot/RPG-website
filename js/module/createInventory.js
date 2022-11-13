@@ -37,25 +37,38 @@ class inventoryCreator
 
         return name;
     }
-    addWeapon
+    addWeapon()
     {
-        const yesId='yes'+this.counter
-        const noId='no'+this.counter
-
+    
         const weapon= document.createElement('div')
-
-        const yesInput=document.createElement('input')
-        yesInput.setAttribute('type','radio')
-        const noInput=document.createElement('input')
 
         const question=document.createElement('span')
         question.classList.add(this.labelStyle)
         const questionText=document.createTextNode('Weapon')
         question.appendChild(questionText)
 
+        this.addYesNo('yes')
+        this.addYesNo('no')
+    }
+
+    addYesNo(textNode)
+    {
+        const id=textNode+this.counter
+        const text=textNode
+        const yesDiv=document.createElement('div')
+        
         const yesLabel= document.createElement('label')
-        const noText=document.createTextNode('Name')
+        const yesText=document.createTextNode(text)
+        yesLabel.classList.add(this.labelStyle)
+        
+        
+        const yesInput=document.createElement('input')
+        yesInput.setAttribute('type','radio')
+        yesInput.setAttribute('id',id)
+        yesLabel.setAttribute('for',id)
 
-
+        yesLabel.appendChild(yesText)
+        yesDiv.appendChild(yesLabel)
+        yesDiv.appendChild(yesInput)
     }
 }
