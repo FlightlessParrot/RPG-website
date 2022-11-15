@@ -1,4 +1,4 @@
-<script type="text/javascript" src="js/buildpages_skill.js"></script>
+<script type="text/javascript" src="./js/buildpages_skill.js"></script>
 
 <form id="pageform" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
 
@@ -68,18 +68,19 @@
             <label for="backgroundinput" class="fablabel">
                 <legend>Background</legend>
             </label>
-            <textarea id="backgroundinput" cols="45" rows="20" name="background"></textarea>
+            <textarea id="backgroundinput" cols="35" rows="20" name="background"></textarea>
         </fieldset>
 
         <fieldset class="narrativearea">
             <label for="goalsinput" class="fablabel">
                 <legend>Goals</legend>
             </label>
-            <textarea id="goalsinput" cols="45" rows="20" name="goals"></textarea>
+            <textarea id="goalsinput" cols="35" rows="20" name="goals"></textarea>
         </fieldset>
     </div>
 
     <!-- page 2-->
+    <div id='page_2'>
     <div class="categorybox">
         <p class="categoryname">Main chracteristic</p>
         <div class="mainchdiv">
@@ -95,11 +96,11 @@
             <input type="number" id="soulinput" class="maincharacteristic" name="soul" maxlength="3" size="3" min="0"/>
         </div>
      </div>
-    <script>
-        skillBuilder.callMe();
-    </script>
+    
+</div>
    
     <!--page 3-->
+    <div id='page_3'>
     <div id="talentdiv">
     <fieldset id="talentsFieldset">		
                 <legend>Talents</legend>
@@ -109,9 +110,15 @@
         <fieldset id="spellsfield">
         <legend>Spells</legend>
         </fieldset>
-    </div>
-    
+    </div>  </div>
+        <!--page 4-->
+        <div>
     <fieldset id="inventory">
        
     </fieldset>
-</form>
+</div>
+    </form>
+<script>
+        skillBuilder.callMe('page_2');
+    </script>
+  

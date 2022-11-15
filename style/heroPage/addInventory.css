@@ -1,0 +1,24 @@
+
+
+#inventory{
+        margin: 10px 0px 0px 0px;
+        border-bottom: none;
+}
+        
+.inventoryDiv{
+        justify-content: start;
+}
+.inputDamage{
+        width: 70px;
+}
+.inventoryDiv *{
+margin: 10px 5px 5px 4px;
+align-content: center;
+}
+.yesNoWeapon{
+        flex-wrap: wrap;
+
+}
+.yesNoWeapon *{flex-basis: 100%;
+       
+}

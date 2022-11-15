@@ -1,28 +1,36 @@
 
 
 .talent{
+    padding-bottom: 20px;
     margin-bottom: 30px;
+    border-bottom: 2px solid #12223d;
+}
+
+.talent>div>label{
+    font-weight: bold;
 }
 
 #talentsFieldset{
     border-bottom: none;
+    flex-basis: 100%;
+    margin: 10px 0px 0px 0px;
 }
-
-
 
 .talentInput{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 10px 0px 10px 0px;
 }  
 .talentInput label{
+    
     align-self: flex-end;
-    margin: 0 0 3px 0;
     flex-basis: 100%;
     height: 30px;
     
 }
 
 .talentInput input{
+    margin: 5px 0px 5px 0px;
     align-self: baseline;
 }

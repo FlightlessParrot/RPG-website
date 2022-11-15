@@ -2,20 +2,20 @@ const skillBuilder=
 {
     skills: 0,
 
-       callMe: async function()
+       callMe: async function(id)
     {
         const link ="./JSON/skillsarray.json";
         //const request = new Request(link);
         const fetcher = await fetch(link);
         const skillsjson = await fetcher.json();
         skillBuilder.skills=skillsjson;
-        skillBuilder.buildSkillsContainer();
+        skillBuilder.buildSkillsContainer(id);
     },
 
-    buildSkillsContainer: function()
+    buildSkillsContainer: function(id)
     {
 
-        this.location=document.getElementById('pageform')
+        this.location=document.getElementById(id)
         this.skilldiv= document.createElement('div')
         this.location.appendChild(this.skilldiv)
 

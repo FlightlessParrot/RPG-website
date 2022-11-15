@@ -1,12 +1,14 @@
 #spellsfield {
   align-items: flex-start;
   border-bottom: none;
+  margin: 10px 0px 0px 0px;
 }
 
 .spell {
   padding: 10px 0px 10px 0px;
   margin: 20px 0px 20px 0px;
   display: flex;
+  flex-basis: 100%;
   flex-wrap: wrap;
   justify-content: flex-start;
   border-bottom: 2px solid #12223d;
@@ -22,8 +24,10 @@
   .spell > div:first-child{
       flex-basis: 100%;
       font-weight: bold;
-      justify-content: flex-start;
+      justify-content: center;
+      margin-bottom: 20px;
   }
+ 
 
 .inputSpellCost,
 .inputSpellRange {

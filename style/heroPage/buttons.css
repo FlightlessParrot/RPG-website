@@ -1,8 +1,9 @@
 
 .buttonsdiv{
+    flex-basis: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 0 2px 0 2px;
+    margin: 2px 0px 10px 0px;
     border-color: #223e70;
     border-style: dotted;
     border-top: none;

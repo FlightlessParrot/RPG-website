@@ -57,10 +57,12 @@ fieldset {
   margin: 5px 2px 2px 2px;
   border-color: #223e70;
   border-style: dotted;
+  flex-basis:100%;
 }
 
 fieldset * {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
@@ -74,10 +76,15 @@ textarea,
 select {
   background-color: rgb(0, 0, 0, 0.2);
   color: #12223d;
-  font-size: 1.1em;
 }
 
 
+input, select{
+  font-size: 1.1em;
+}
+textarea{
+  font-size: 1.5em;
+}
 
 hr {
   border-color: #12223d;
@@ -102,3 +109,13 @@ hr {
   color: lightgray;
 }
 
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+  -moz-appearance: textfield;
+}

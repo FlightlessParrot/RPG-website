@@ -1,4 +1,7 @@
-
+#heroname_label
+{
+  font-weight: bold;
+}
 .fablabel{
   margin: 2px 5px 2px 7px;
 }
