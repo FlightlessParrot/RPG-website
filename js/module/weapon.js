@@ -1,0 +1,7 @@
+
+class damage{
+    constructor(location)
+    {
+        
+    }
+}
