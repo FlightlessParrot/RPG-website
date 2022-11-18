@@ -149,7 +149,7 @@ class inventoryElement
     for( let x in this.equipment)
     {
         let option=document.createElement('option')
-        let optionText=document.createTextNode(x)
+        let optionText=document.createTextNode(this.equipment[x])
         option.appendChild(optionText)
         select.append(option)
     }

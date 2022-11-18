@@ -82,7 +82,7 @@
     <!-- page 2-->
     <div id='page_2'>
     <div class="categorybox">
-        <p class="categoryname">Main chracteristic</p>
+        <p class="categoryname">Main chracteristic & Skills</p>
         <div class="mainchdiv">
             <label for="bodyinput" class="charlabel"> Body</label>
             <input type="number" id="bodyinput" class="maincharacteristic" name="body" maxlength="3" size="3" min="0"/>
@@ -101,20 +101,35 @@
    
     <!--page 3-->
     <div id='page_3'>
+    <p class="categoryname">Talents, Spells & Mirracles</p>
     <div id="talentdiv">
     <fieldset id="talentsFieldset">		
                 <legend>Talents</legend>
         </fieldset>
     </div>
     <div>
+        
         <fieldset id="spellsfield">
-        <legend>Spells</legend>
+        <legend>Spells & Mirracles</legend>
         </fieldset>
     </div>  </div>
         <!--page 4-->
         <div>
+        <p class="categoryname">Inventory</p>
     <fieldset id="inventory">
-       
+        <legend>Equipment</legend>
+        <div class="mainchdiv">
+            <label for="drops" class="currLabel"> Drops</label>
+            <input type="number" id="drops" class="currency" name="drops" maxlength="10" size="10" min="0"/>
+        </div>
+        <div class="mainchdiv">
+            <label for="mindinput" class="currLabel"> Mind</label>
+            <input type="number" id="phials" class="currency" name="mind" maxlength="10" size="10" min="0"/>
+        </div>
+        <div class="mainchdiv">
+            <label for="soulinput" class="currLabel"> Soul</label>
+            <input type="number" id="soulinput" class="currency" name="soul" maxlength="10" size="10" min="0"/>
+        </div>
     </fieldset>
 </div>
     </form>
