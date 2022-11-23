@@ -116,22 +116,45 @@
         <!--page 4-->
         <div>
         <p class="categoryname">Inventory</p>
+        <div id="moneyBag">
+        <div class="currencyDiv">
+            <label for="drops" class="currlabel" class="fablabel"> Drops</label>
+            <input type="number" id="drops" class="currency" name="drops" maxlength="10" size="8" min="0"/>
+        </div>
+        <div class="currencyDiv">
+            <label for="phials" class="currlabel" class="fablabel"> Phials</label>
+            <input type="number" id="phials" class="currency" name="phials" maxlength="10" size="8" min="0"/>
+        </div>
+        <div class="currencyDiv">
+            <label for="spheres" class="currlabel" class="fablabel"> Spheres</label>
+            <input type="number" id="spheres" class="currency" name="spheres" maxlength="10" size="8" min="0"/>
+        </div>
+</div>
     <fieldset id="inventory">
         <legend>Equipment</legend>
-        <div class="mainchdiv">
-            <label for="drops" class="currLabel"> Drops</label>
-            <input type="number" id="drops" class="currency" name="drops" maxlength="10" size="10" min="0"/>
-        </div>
-        <div class="mainchdiv">
-            <label for="mindinput" class="currLabel"> Mind</label>
-            <input type="number" id="phials" class="currency" name="mind" maxlength="10" size="10" min="0"/>
-        </div>
-        <div class="mainchdiv">
-            <label for="soulinput" class="currLabel"> Soul</label>
-            <input type="number" id="soulinput" class="currency" name="soul" maxlength="10" size="10" min="0"/>
-        </div>
+        
     </fieldset>
 </div>
+<div id="combatInventory">
+<div>
+<label for="armour" class="fablabel">Armour</label>
+<select id="armour">
+<option>light</option>
+<option>medium</option>
+<option>heavy</option>
+</select>
+</div>
+<label for="yesShield" class="fablabel">Shield</label>
+<div>
+    <label for="yesShield">yes</label>
+    <input id="yesShield" type="radio" name="shield" value="yes" />
+</div>
+<div>
+    <label for="noShield">no</label>
+    <input id="noShield" type="radio" name="shield" value="no" checked="checked" />
+</div>
+</div>
+
     </form>
 <script>
         skillBuilder.callMe('page_2');

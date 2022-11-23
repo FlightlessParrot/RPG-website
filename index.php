@@ -29,7 +29,9 @@ session_regenerate_id();
 	<link href="./style/heroPage/skills.css" type="text/css" rel="stylesheet">
 	<link href="./style/heroPage/buttons.css" type="text/css" rel="stylesheet">
 	<link href="./style/heroPage/addInventory.css" type="text/css" rel="stylesheet">
-
+	<link href="./style/heroPage/currency.css" type="text/css" rel="stylesheet">
+	<link href="./style/heroPage/combatInventory.css" type="text/css" rel="stylesheet">
+	
 	<script type="module" src="js/dropdown.js"></script>
 	<script type="module" src='js/createTalentsTop.js'></script>
 	<script type="module" src='js/createSpellsTop.js'></script>

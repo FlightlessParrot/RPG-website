@@ -1,0 +1,23 @@
+#moneyBag{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.currency{
+    width: 100px;
+    height: 50px;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 50%;
+}
+.currencyDiv{
+    border-right: 2px solid #12223d;
+    border-bottom: 2px solid #12223d;
+    border-radius: 15px;
+    margin: 6px 8px 8px 6px;
+    padding: 5px 8px 5px 8px;
+}
+.currlabel{
+    font-size: 2em;
+}

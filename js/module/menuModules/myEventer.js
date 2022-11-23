@@ -26,7 +26,7 @@ function myEventer()
     function noChange()
     {
             const ccolor="lightgray"
-            if(this==this.parentElement.children[1])
+            if(this==this.parentElement.children[0])
             {
                 this.style.backgroundImage="linear-gradient(to bottom, black,rgb(68, 68, 68))"
             }
